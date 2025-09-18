@@ -20,20 +20,21 @@ def send_discord(anime):
 
     payload = {
         "embeds": [embed],
-        "components": []
     }
 
     if trailer_url:
-        payload["components"].append({
-            "type": 1,
-            "components": [
-                {
-                    "type": 2,
-                    "style": 5,
-                    "label": "Trailer",
-                    "url": trailer_url
-                }
-            ]
-        })
+        payload["components"] = [
+            {
+                "type": 1,
+                "components": [
+                    {
+                        "type": 2,
+                        "style": 5,
+                        "label": "Trailer",
+                        "url": trailer_url
+                    }
+                ]
+            }
+        ]
 
     requests.post(os.getenv("DISCORD_WEBHOOK_URL"), json=payload, headers={"Content-Type": "application/json"})
