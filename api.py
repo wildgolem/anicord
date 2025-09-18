@@ -24,7 +24,7 @@ def fetch_anime(limit=50):
       }
     }
     """
-    variables = {"page": 1, "perPage": limit}
+    variables = {"page": 2, "perPage": limit}
     response = requests.post("https://graphql.anilist.co", json={"query": query, "variables": variables})
     if response.status_code != 200:
         return []
