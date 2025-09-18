@@ -20,6 +20,10 @@ def fetch_anime(limit=25):
             large
           }
           countryOfOrigin
+          trailer {
+            id
+            site
+          }
         }
       }
     }
