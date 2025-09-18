@@ -10,8 +10,8 @@ def main():
     for anime in reversed(anime_list):
         ani_id = anime.get("id")
         if (
-            mal_id
-            and mal_id not in existing_ids
+            ani_id
+            and ani_id not in existing_ids
             and anime.get("countryOfOrigin") == "JP"
             and anime.get("format") not in {"MUSIC", "TV_SHORT"}
         ):
