@@ -7,8 +7,6 @@ def send_discord(anime):
     url = f"https://anilist.co/anime/{anilist_id}"
     cover_url = anime.get("coverImage", {}).get("large", "")
     genres = ", ".join(anime.get("genres", []))
-    trailer = anime.get("trailer")
-    trailer_url = f"https://www.youtube.com/watch?v={trailer.get('id')}" if trailer and trailer.get("site") == "youtube" else None
     
     embed = {
         "title": title,
@@ -19,7 +17,6 @@ def send_discord(anime):
     }
 
     payload = {
-        "content": trailer_url,
         "embeds": [embed],
     }
 
