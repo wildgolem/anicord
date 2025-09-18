@@ -8,7 +8,7 @@ def main():
     anime_list = fetch_anime()
     new_ids = set()
     for anime in reversed(anime_list):
-        mal_id = anime.get("idMal")
+        ani_id = anime.get("id")
         if (
             mal_id
             and mal_id not in existing_ids
@@ -16,7 +16,7 @@ def main():
             and anime.get("format") not in {"MUSIC", "TV_SHORT"}
         ):
             send_discord(anime)
-            new_ids.add(mal_id)
+            new_ids.add(ani_id)
             time.sleep(0.5)
     if new_ids:
         save_ids(existing_ids.union(new_ids))
