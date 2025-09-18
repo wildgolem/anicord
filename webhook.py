@@ -19,7 +19,7 @@ def send_discord(anime):
     }
 
     payload = {
-        "content": f"<{trailer_url}>",
+        "content": f"[trailer]({trailer_url})",
         "embeds": [embed],
     }
 
