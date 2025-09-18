@@ -11,7 +11,7 @@ def send_discord(anime):
     embed = {
         "title": title,
         "url": url,
-        "color": 0x2e51a2,
+        "color": 0x0B1622,
         "image": {"url": cover_url},
         "footer": {"text": genres},
     }
