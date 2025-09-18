@@ -3,8 +3,8 @@ import requests
 
 def send_discord(anime):
     title = anime.get("title", {}).get("romaji")
-    mal_id = anime.get("idMal")
-    url = f"https://myanimelist.net/anime/{mal_id}"
+    anilist_id = anime.get("id")
+    url = f"https://anilist.co/anime/{anilist_id}"
     genres = ", ".join(anime.get("genres", []))
     embed = {
         "embeds": [
