@@ -1,6 +1,6 @@
 import requests
 
-def fetch_anime(limit=50):
+def fetch_anime(limit=25):
     query = """
     query ($page: Int, $perPage: Int) {
       Page(page: $page, perPage: $perPage) {
