@@ -10,7 +10,7 @@ def fetch_anime(limit=50):
           sort: END_DATE_DESC,
           genre_not_in: ["Hentai"]
         ) {
-          idMal
+          id
           format
           title {
             romaji
