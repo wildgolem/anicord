@@ -12,7 +12,7 @@ def send_discord(anime):
         "title": title,
         "url": url,
         "color": 0x0B1622,
-        "thumbnail": {"url": cover_url},
+        "image": {"url": cover_url},
         "footer": {"text": genres},
     }
 
